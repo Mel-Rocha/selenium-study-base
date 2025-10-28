@@ -49,7 +49,7 @@ def create_driver():
 
 if __name__ == "__main__":
     # Teste rápido se rodar este arquivo diretamente
-    driver = create_driver()
-    driver.get("https://www.google.com")
+    d = create_driver()
+    d.get("https://www.google.com")
     input("Pressione ENTER para fechar...")
-    driver.quit()
+    d.quit()

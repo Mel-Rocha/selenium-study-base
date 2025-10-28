@@ -68,12 +68,12 @@ def create_advanced_driver(
 
 
 if __name__ == "__main__":
-    driver = create_advanced_driver(
+    d = create_advanced_driver(
         headless=False,
         # Exemplo para persistir login do Chrome local:
         # user_data_dir="/home/seuusuario/.config/google-chrome/Default"
         user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/123.0"
     )
-    driver.get("https://www.whatismybrowser.com")
+    d.get("https://www.whatismybrowser.com")
     input("Pressione ENTER para fechar...")
-    driver.quit()
+    d.quit()
