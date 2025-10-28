@@ -40,6 +40,11 @@ def create_advanced_driver(
     # Headless moderno
     if headless:
         options.add_argument("--headless=new")
+        # evita layout mobile e elementos escondidos!
+        options.add_argument("--window-size=1920,1080")
+    else:
+        # somente para execução com GUI
+        options.add_argument("--start-maximized")
 
     # Para reduzir logs de debug do Chrome
     options.add_argument("--log-level=3")
@@ -47,9 +52,6 @@ def create_advanced_driver(
 
     # Ignora erros SSL (sites com certificados incompletos)
     options.add_argument("--ignore-certificate-errors")
-
-    # Maximiza a janela automaticamente
-    options.add_argument("--start-maximized")
 
     # Perfil persistente (mantém login)
     if user_data_dir:
